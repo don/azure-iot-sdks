@@ -221,8 +221,8 @@ BEGIN_TEST_SUITE(iothubclient_amqp_e2etests)
     {
         ASSERT_ARE_EQUAL(int, 0, platform_init());
         INITIALIZE_MEMORY_DEBUG(g_dllByDll);
-        platform_init();
         g_iothubAcctInfo = IoTHubAccount_Init(true);
+        platform_init();
         ASSERT_IS_NOT_NULL(g_iothubAcctInfo);
     }
 
