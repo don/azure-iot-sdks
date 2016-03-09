@@ -210,7 +210,7 @@ static BUFFER_HANDLE sendDeviceRegistryInfo(IOTHUB_ACCOUNT_INFO* accountInfo, BU
                 char relativePath[256];
                 sprintf_s(relativePath, 256, RELATIVE_PATH_FMT, accountInfo->deviceId, URL_API_VERSION);
 
-                unsigned int statusCode;
+                unsigned int statusCode = 0;
 
                 // Send PUT method to url
                 HTTP_HEADERS_HANDLE httpHeader = getContentHeaders((deviceBuffer == NULL) ? true : false);
